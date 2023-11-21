@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, <span th:text="${user.username}"></span>!</h1>
+    <img th:src="${user.profilePictureUrl}" alt="Profile Picture">
+
+    <div>
+        <a href="/login">Login</a>
+        <a href="/focus">Focus</a>
+        <a href="/menstrual">Menstrual</a>
+        <a href="/medications">Medications</a>
+        <a href="/activity">Activity</a>
+    </div>
+</body>
+</html>

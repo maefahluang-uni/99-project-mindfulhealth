@@ -3,7 +3,6 @@ package th.mfu.domain;
 import javax.persistence.*;
 import java.sql.Date;
 
-
 @Entity
 @Table(name = "menstrual_page")
 public class menstrual {
@@ -24,7 +23,7 @@ public class menstrual {
     @Column(name = "symptoms")
     private String symptoms;
 
-    @Column(name = "is_period_ontime")
+    @Column(name = "is_period_on_time")
     private Boolean isPeriodOnTime;
 
     // Getters and Setters
