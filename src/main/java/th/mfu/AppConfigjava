@@ -1,0 +1,14 @@
+package th.mfu.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import th.mfu.domain.Login;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public Login loginBean() {
+        return new Login();
+    }
+}

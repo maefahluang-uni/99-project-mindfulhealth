@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class login {
+public class Login {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,5 +40,9 @@ public class login {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isValidLogin(String username2, String password2) {
+        return false;
     }
 }
