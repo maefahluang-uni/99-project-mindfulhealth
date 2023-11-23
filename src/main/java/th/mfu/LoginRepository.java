@@ -3,6 +3,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import th.mfu.domain.Dashboard;
 
-public interface focusRepository extends JpaRepository<Dashboard, Long> {
-    ;
+public interface LoginRepository extends JpaRepository<Dashboard, Long> {
+   ;
 }

@@ -3,6 +3,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import th.mfu.domain.Dashboard;
 
-public interface medicationsRepository extends JpaRepository<Dashboard, Long> {
+public interface MedicationsRepository extends JpaRepository<Dashboard, Long> {
     ;
 }

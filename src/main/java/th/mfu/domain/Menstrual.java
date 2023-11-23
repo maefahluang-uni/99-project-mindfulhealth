@@ -5,7 +5,7 @@ import java.sql.Date;
 
 @Entity
 @Table(name = "menstrual_page")
-public class menstrual {
+public class Menstrual {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

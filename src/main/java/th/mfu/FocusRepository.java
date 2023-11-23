@@ -3,6 +3,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import th.mfu.domain.Dashboard;
 
-public interface menstrualRepository extends JpaRepository<Dashboard, Long> {
+public interface FocusRepository extends JpaRepository<Dashboard, Long> {
     ;
 }
