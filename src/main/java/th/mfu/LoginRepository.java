@@ -1,8 +1,10 @@
 package th.mfu;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-import th.mfu.domain.Dashboard;
+import org.springframework.data.repository.CrudRepository;
 
-public interface LoginRepository extends JpaRepository<Dashboard, Long> {
-   ;
+import th.mfu.domain.Concert;
+
+
+public interface LoginRepository extends CrudRepository<Concert, Long> {
+      
 }

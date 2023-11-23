@@ -1,8 +1,9 @@
 package th.mfu;
-import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.data.repository.CrudRepository;
 
 import th.mfu.domain.Dashboard;
 
-public interface DashboardRepository extends JpaRepository<Dashboard, Long> {
-    Dashboard findByUsername(String username);
+public interface DashboardRepository extends CrudRepository<Dashboard, Long> {
+    
 }
