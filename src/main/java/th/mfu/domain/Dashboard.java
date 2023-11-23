@@ -20,7 +20,7 @@ public class Dashboard {
       private String lastName;
       private String email;
   
-      //TODO: add proper annotation for relationship to seat
+      //TODO: add proper annotation for relationship 
       @OneToOne(cascade = CascadeType.MERGE)
       @JoinColumn(name = "user_id")
 
