@@ -2,7 +2,6 @@ package th.mfu.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
 public class Dashboard {
@@ -12,7 +11,7 @@ public class Dashboard {
 
     private String title;
     private String description;
-    
+
     public Dashboard() {
         // Default constructor
     }

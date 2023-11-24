@@ -6,4 +6,6 @@ import th.mfu.domain.Login;
 public interface LoginRepository extends JpaRepository<Login, String> {
 
     Login findByUsernameAndPassword(String username, String password);
+
+    Login findByUsername(String username);
 }

@@ -1,5 +1,2 @@
-CREATE TABLE IF NOT EXISTS "LOGIN" (
-    username VARCHAR(255) PRIMARY KEY,
-    password VARCHAR(255)
-);
-
+INSERT INTO LOGIN (username, password) VALUES 
+('Mook', 'Mook1234');

@@ -75,10 +75,10 @@
 <body>
     <div class="container">
         <h1>MINDFUL HEALTH</h1>
-        <form action="/login" method="post">
+        <form id="loginForm" onsubmit="validateCredentials()">
             <div class="row">
                 <div class="col-md-12">
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="username" id="username" placeholder="Username">
                 </div>
             </div>
             <div class="row">
@@ -98,42 +98,5 @@
             </div>
         </form>
     </div>
-
-    <script>
-        function togglePassword() {
-            var passwordInput = document.getElementById('password');
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-            } else {
-                passwordInput.type = 'password';
-            }
-        }
-
-        function login() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-
-    // Send login data to the backend
-    fetch('/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-    })
-    .then(response => response.text())
-    .then(result => {
-        if (result === 'dashboard.html') {
-            // Redirect to the dashboard page
-            window.location.href = result;
-        } else {
-            alert(result);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-    </script>
 </body>
 </html>
