@@ -98,5 +98,29 @@
             </div>
         </form>
     </div>
+    <script>
+        function validateCredentials() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Mook" && password === "Mook1234") {
+                // Login successful, hide login page and show dashboard page
+                document.getElementById("loginPage").style.display = "none";
+                document.getElementById("dashboardPage").style.display = "block";
+                return false; // prevent form submission
+            } else {
+                // Incorrect credentials, show error message
+                alert("Incorrect username or password");
+                return false; // prevent form submission
+            }
+        }
+
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            passwordField.type = (passwordField.type === "password") ? "text" : "password";
+        }
+    </script>
+</body>
+</html>
 </body>
 </html>
