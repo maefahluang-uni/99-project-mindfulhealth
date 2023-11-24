@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LoginController {
     @Autowired
-    LoginRepository concertRepo;
+    LoginRepository LoginRepo;
 
     @Autowired
-    DashboardRepository reservationRepo;
+    DashboardRepository DashboardRepo;
 
     @GetMapping("/login")
     public String listConcerts(Model model) {
-        model.addAttribute("concerts", concertRepo.findAll());
+        model.addAttribute("concerts", LoginRepo.findAll());
         return "login";
     }
 }

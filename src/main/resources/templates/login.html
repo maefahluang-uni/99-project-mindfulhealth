@@ -108,6 +108,32 @@
                 passwordInput.type = 'password';
             }
         }
+
+        function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Send login data to the backend
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+    })
+    .then(response => response.text())
+    .then(result => {
+        if (result === 'dashboard.html') {
+            // Redirect to the dashboard page
+            window.location.href = result;
+        } else {
+            alert(result);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
     </script>
 </body>
 </html>

@@ -1,10 +1,9 @@
 package th.mfu;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import th.mfu.domain.Login;
 
-import th.mfu.domain.Concert;
+public interface LoginRepository extends JpaRepository<Login, String> {
 
-
-public interface LoginRepository extends CrudRepository<Concert, Long> {
-      
+    Login findByUsernameAndPassword(String username, String password);
 }

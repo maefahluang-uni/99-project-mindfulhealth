@@ -1,6 +1,5 @@
-CREATE TABLE Login (
-    id BIGINT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    last_login TIMESTAMP
+CREATE TABLE IF NOT EXISTS "LOGIN" (
+    username VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255)
 );
+
