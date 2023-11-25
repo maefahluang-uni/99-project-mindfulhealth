@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Cycle Form</title>
+</head>
+<body>
+
+    <h1>Menstrual Cycle Form</h1>
+
+    <form action="calculateMenstrual" method="post">
+        <label for="days">Cycle Length (Days):</label>
+        <input type="number" id="days" name="days" required><br>
+
+        <label for="monthlyFlow">Monthly Flow (Months):</label>
+        <input type="number" id="monthlyFlow" name="monthlyFlow" required><br>
+
+        <label for="menstrualPeriod">Menstrual Period (Days):</label>
+        <input type="number" id="menstrualPeriod" name="menstrualPeriod" required><br>
+
+        <label for="lutealPhase">Luteal Phase (Days):</label>
+        <input type="number" id="lutealPhase" name="lutealPhase" required><br>
+
+        <label for="symptoms">Symptoms:</label>
+        <textarea id="symptoms" name="symptoms"></textarea><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+</body>
+</html>
