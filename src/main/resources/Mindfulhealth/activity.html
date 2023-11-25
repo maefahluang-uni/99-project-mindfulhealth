@@ -3,7 +3,7 @@
     <title>Menstrual Tracking</title>
     <style>
           body {
-            background-color: #5488a6;
+            background-color: #9cc5e7;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             display: flex;
@@ -12,7 +12,7 @@
             min-height: 100vh;
         }
         .container {
-            background-color: rgb(255, 254, 230);
+            background-color: rgb(255, 254, 235);
             padding: 90px;
             border-radius: 50px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -42,12 +42,12 @@
             padding: 20px;
             font-size: 18px;
             border-radius: 20px;
-            background-color: #5488a6;
-            border: none;
-            color: #f4f1e9;
+            background-color: #9cc5e7;
+            color: #ffffff;
             cursor: pointer;
         }
         .main-buttons button:hover {
+            border: 2px;
             background-color: #0a1e2b;
         }
         .date-display {
@@ -66,7 +66,7 @@
             align-items: center;
         }
         .box {
-            background-color: #f4f1e9;
+            background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -75,7 +75,7 @@
             width: 100%;
             max-width: 600px;
             position: relative;
-            text-align: center; /* Center text within the box */
+            text-align: center; 
         }
         .box label {
             font-size: 18px;
@@ -102,14 +102,14 @@
             padding: 15px;
             border-radius: 10px;
             cursor: pointer;
-            background-color: #5488a6;
-            color: #f4f1e9;
+            background-color: #9cc5e7;
+            color: rgb(255, 254, 235);
         }
         .date-table td:hover {
-            background-color: #5a93b8;
+            background-color: #9cc5e7;
         }
         .selected-date {
-            background-color: #95aec0;
+            background-color: #9cc5e7;
         }
         .record-button {
             width: 150%;
@@ -119,7 +119,7 @@
             cursor: pointer;
             background-color: #4caf50;
             border: 2px solid #000;
-            color: #f4f1e9;
+            color:rgb(255, 254, 235);
             margin-top: 20px;
         }
         .record-button:hover {
@@ -140,12 +140,12 @@
             border-radius: 15px;
             cursor: pointer;
             margin-top: 10px;
-            background-color: #5488a6;
+            background-color: #9cc5e7;
             border: 2px solid #000;
-            color: #f4f1e9;
+            color: rgb(255, 254, 235);
         }
         .options button:hover {
-            background-color: #5a93b8;
+            background-color: #9cc5e7;
         }
         .popup {
             display: none;
@@ -159,7 +159,7 @@
             align-items: center;
         }
         .popup-content {
-            background: #f4f1e9;
+            background: rgb(255, 254, 235);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -171,14 +171,14 @@
             top: 10px;
             right: 10px;
             padding: 10px;
-            background-color: #5488a6;
-            color: #f4f1e9;
+            background-color: #9cc5e7;
+            color: rgb(255, 254, 235);
             border: none;
             border-radius: 15px;
             cursor: pointer;
         }
         .close-btn:hover {
-            background-color: #5a93b8;
+            background-color: #9cc5e7;
         }
         .popup-buttons {
             margin-top: 20px;
@@ -194,11 +194,11 @@
         }
         .popup-buttons button.send-btn {
             background-color: #4caf50;
-            color: #f4f1e9;
+            color: rgb(255, 254, 235);
         }
         .popup-buttons button.cancel-btn {
-            background-color: #5488a6;
-            color: #f4f1e9;
+            background-color: #9cc5e7;
+            color: rgb(255, 254, 235);
         }
         .save-button {
             width: 50%;
@@ -208,7 +208,7 @@
             cursor: pointer;
             background-color: #4caf50;
             border: 2px solid #000;
-            color: #f4f1e9;
+            color: rgb(255, 254, 235);
             margin-top: 5px;
         }
         .save-button:hover {
@@ -221,7 +221,7 @@
             cursor: pointer;
             background-color: #4caf50;
             border: 2px solid #000;
-            color: #f4f1e9;
+            color:rgb(255, 254, 235);
             margin-top: 5px;
         }
         .clear-button:hover {
@@ -269,7 +269,8 @@
     <a href="focus.html"><button> <svg fill="#3b3e40" width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M833.056 64.608h-64.465v215.408c0 104.384-56.656 183.359-178.097 245.199 126.064 63.808 179.104 142.159 179.104 259.071 0 76.128-.336 140-.592 175.12h64.065c17.68 0 32 14.288 32 31.968s-14.32 32-32 32H190.943c-17.68 0-32-14.32-32-32s14.32-31.968 32-31.968h65.935c-.24-35.12-.591-99.008-.591-175.12 0-116.912 52.288-195.248 178.145-259.056C313.2 463.39 257.295 384.415 257.295 280.031V64.607h-66.352c-17.68 0-32-14.304-32-32 0-17.664 14.32-31.984 32-31.984h642.128c17.68 0 32 14.32 32 31.984-.016 17.696-14.32 32-32.016 32zm-512.785 719.68c0 76.288.353 140.224.593 175.12H705.04c.223-34.912.592-98.848.592-175.12 0-89.008-33.12-158.032-193.185-224.4-160.016 66.368-192.176 135.393-192.176 224.4zm384.352-719.68H321.264v215.408c0 61.376 20.64 140.416 191.168 210.528 170.56-70.112 192.191-149.152 192.191-210.528V64.608z"></path></g></svg>
     </button></a>
     <a href="activity.html"><button><svg fill="#3b3e40" width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M508.416 1023.28c-241.248 0-412.369-167.28-412.369-397.777 0-122.368 73.376-254.192 76.496-259.712 6.368-11.343 18.88-17.504 31.936-16.063a32.052 32.052 0 0 1 26.88 23.567c.192.752 19.968 74.752 46.064 115.84 17.536 27.649 35.312 47.185 55.312 60.753-13.536-58.656-23.904-146.912-7.024-237.472C372.047 63.84 567.695 4.368 576.08 1.968c10.784-3.088 22.225-.32 30.433 7.151 8.192 7.504 11.936 18.752 9.808 29.665-.32 1.744-32.624 175.776 35.936 324.064 6.223 13.471 14.912 29.12 24.256 44.784 2.656-21.504 6.784-44.368 13.12-66.56 25.152-87.969 90.192-118 92.944-119.217 10.848-4.944 23.504-3.312 32.88 4.032a32.061 32.061 0 0 1 11.68 31.007c-.336 2.16-9.409 62.033 41.536 146.944 46 76.672 59.28 126.368 59.28 221.681 0 230.48-176.432 397.761-419.536 397.761zm-312.721-555.6c-17.568 44.304-35.665 103.246-35.665 157.806 0 193.408 144.192 333.776 348.368 333.776 206 0 355.536-140.368 355.536-333.776 0-83.536-10.32-122.32-50.16-188.752-26.624-44.368-39.777-84.256-46.065-116-6.336 10.256-12.223 22.784-16.527 37.872-19.504 68.193-14.592 147.937-14.527 148.753.944 14.273-7.744 27.473-21.248 32.257s-28.529.064-36.817-11.663c-2.4-3.408-59.312-83.968-84.4-138.24-52.096-112.592-51.216-234.336-45.904-304.464-52.72 30.72-133.664 99.344-159.664 238.912-25.312 135.808 23.872 271.6 24.4 272.943 4.256 11.088 2 23.664-5.808 32.592-7.84 8.88-19.904 12.815-31.536 10.03-3.967-.975-94.032-24.399-152.336-116.286-10.416-16.464-19.76-36.384-27.647-55.76z"></path></g></svg></button></a>
+    <a href="menstrual.html"><button><svg fill="#3b3e40" width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32zm0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32zm-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32zm0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32z"></path></g></svg></button></a>
 </div>
 
     <div class="container">
-        <h1>Menstrual Tracking</h1>
+        <h1>Activity</h1>
