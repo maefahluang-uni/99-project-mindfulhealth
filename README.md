@@ -16,15 +16,16 @@ List your group's member's below with ID and name.
 1.The user inputs their information.
 2.Check information.
 3.Confirm the information.  
-   a.If correct, show the Dashboard page.
-   b.If incorrect, allow the user to edit the information.
+   - If correct, show the Dashboard page.
+   - If incorrect, allow the user to edit the information.
 
 
 ## Dashboard
 1. The user inputs their information.
 2. Check information.
 3. Confirm the information.  
-  If correct, show the Dashboard page and  If incorrect, allow the user to edit the information.
+  - If correct, show the Dashboard page.
+  -  If incorrect, allow the user to edit the information.
 
 
 ## Focus
