@@ -26,6 +26,7 @@
         .page {
             display: none;
             height: 50vh;
+            width: 800px;
             overflow-y: auto;
         }
         #mainPage {
@@ -50,16 +51,8 @@
             border: 2px;
             background-color: #0a1e2b;
         }
-        .date-display {
-            margin-top: 20px;
-            font-size: 20px;
-            text-align: center;
-            color: #3b3e40;
-        }
-        .date-display span {
-            font-weight: bold;
-            display: block;
-        }
+
+
         .box-container {
             display: flex;
             flex-direction: column;
@@ -72,8 +65,8 @@
             padding: 20px;
             margin-top: 20px;
             box-sizing: border-box;
-            width: 100%;
-            max-width: 600px;
+            width: 2000%;
+            max-width: 1300px;
             position: relative;
             text-align: center; 
         }
@@ -180,6 +173,20 @@
         .close-btn:hover {
             background-color: #9cc5e7;
         }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #9cc5e7;
+            color: rgb(255, 254, 235);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            background-color: #9cc5e7;
+        }
         .popup-buttons {
             margin-top: 20px;
             display: flex;
@@ -255,12 +262,7 @@
         .sidebar button:hover {
             background-color: #ccc;
         }
-        .info-box {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
+       
 
   
     </style>
@@ -280,92 +282,44 @@
 </div>
 
     <div class="container">
-        <h1>Menstrual Tracking</h1>
+        <h1>Focus Mode</h1>
 
-        <!-- Main Page -->
-        <div class="page" id="mainPage">
-            <div class="date-display" id="dateDisplay"></div>
+          <!-- Main Page -->
+          <div class="page" id="mainPage">
             <div class="main-buttons">
-                <button onclick="goToPage('page1')">Date calculate</button>
-                <button onclick="goToPage('page2')">End Date</button>
-                <button onclick="goToPage('page3')">Symptoms</button>
-                <button onclick="goToPage('page4')">Menstrual Flow</button>
-                <button onclick="goToPage('page5')">My menstrual tracking</button>
+                <button onclick="goToPage('page1')">Start Focus mode</button>
+
             </div>
         </div>
 
         <!-- Page 1 -->
         <div class="page" id="page1">
             <div class="box-container">
+                <div class="popup-buttons">
                 <div class="box">
-                    <h1>Menstrual Duration Calculator</h1>
+                    <label>Count Up Timer</label>
 
-                    <label for="startDate">First Day of Period:</label>
-                    <input type="date" id="startDate">
-                
-                    <label for="endDate">Last Day of Period:</label>
-                    <input type="date" id="endDate">
-                
-                    <button onclick="calculateDuration()">Save</button>
-                
-                    <h2>Result:</h2>
-                    <p id="result"></p>
+                    <iframe src="https://giphy.com/embed/Re1J2OtYYGk78oP155" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ghost-boo-boogie-Re1J2OtYYGk78oP155"></a></p>
+                   
+                 <h1 id="myTimer">00:00:00</h1>
+
+                <button onclick="startTimer()">Start</button>
+                <button onclick="stopTimer()">Stop</button>
+                <button onclick="resetTimer()">Reset</button>
+                <button onclick="saveTimer()">Save</button>
                 </div>
-                <div class="options">
-                    <button onclick="goToPage('mainPage')">Back</button>
+            </div>
+            <div class="options">
+                <button onclick="goToPage('mainPage')">Back</button>
+                
+            </div>
                     
                 </div>
             </div>
         </div>
 
-        <!-- Page 2 -->
-        <div class="page" id="page2">
-            <div class="box-container">
-                <div class="box">
-                    <label for="datePicker2">End Date:</label>
-                    <input type="date" id="datePicker2" onchange="highlightSelectedDate(this, 'periodEndDateTable')">
-                </div>
-                <div class="record-button-container">
-                    <button class="record-button" onclick="recordDate('End')">Record</button>
-                </div>
-                <div class="options">
-                    <button onclick="goToPage('mainPage')">Back</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Page 3 -->
-        <div class="page" id="page3">
-            <div class="box-container">
-                <div class="box">
-                    <label for="symptoms">Choose Symptoms:</label>
-                    <select id="symptoms">
-                        <option value="cramps">Cramps</option>
-                        <option value="headache">Headache</option>
-                        <option value="fatigue">Fatigue</option>
-                        <!-- Add more symptoms as needed -->
-                    </select>
-                </div>
-                <div class="options">
-                    <button onclick="goToPage('mainPage')">Back</button>
-                </div>
-                <button class="save-button" onclick="saveSymptom('End')">Save</button>
-            </div>
-        </div>
-
-        <!-- Page 4 -->
-        <div class="page" id="page4">
-            <div class="popup-buttons">
-                <button class="send-btn" onclick="periodOnTime()">On Time</button>
-                <button class="cancel-btn" onclick="showPopup()">Not On Time</button>
-            </div>
-            <div class="options">
-                <button onclick="goToPage('mainPage')">Back</button>
-            </div>
-        </div>
-
-        <!-- Popup for "Not On Time" -->
-        <div class="popup" id="popup">
+         <!-- Popup for "Not On Time" -->
+         <div class="popup" id="popup">
             <div class="popup-content">
                 <h2>Not On Time</h2>
                 <label for="note">Write a note:</label>
@@ -376,145 +330,78 @@
                 </div>
             </div>
         </div>
-
-        <!-- Page 5 - Results -->
-        <div class="page" id="page5">
-            <div class="box-container">
-                <div class="box">
-                    <h2>Results</h2>
-                    <div class="date-display" id="resultDateDisplay"></div>
-                    <div class="symptom-display" id="resultSymptomDisplay"></div>
-                    <div class="note-display" id="resultNoteDisplay"></div>
-                    <button class="clear-button" onclick="clearResults()">Clear</button>
-                </div>
-                <div class="options">
-                    <button onclick="goToPage('mainPage')">Back</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-
-
-    <script>
-let currentPage = 'mainPage';
-    let resultSent = false; // Flag to track whether result has been sent
-
-    function goToPage(page) {
-        document.getElementById(currentPage).style.display = 'none';
-        document.getElementById(page).style.display = 'block';
-        currentPage = page;
-    }
-
-    function calculateDuration() {
-            // Get the values of the input fields
-            var startDate = new Date(document.getElementById('startDate').value);
-            var endDate = new Date(document.getElementById('endDate').value);
-
-            // Check if both dates are valid
-            if (isNaN(startDate) || isNaN(endDate)) {
-                alert('Please select valid dates.');
-                return;
+    
+        <script>
+            let currentPage = 'mainPage';
+            let resultSent = false; // Flag to track whether result has been sent
+        
+            function goToPage(page) {
+                document.getElementById(currentPage).style.display = 'none';
+                document.getElementById(page).style.display = 'block';
+                currentPage = page;
             }
-
-            // Calculate the duration in days
-            var durationInMilliseconds = endDate - startDate;
-            var durationInDays = durationInMilliseconds / (1000 * 60 * 60 * 24);
-
-            // Display the result
-            document.getElementById('result').innerText = 'Duration: ' + durationInDays + ' days';
-        }
-
-    function showPopup() {
-        document.getElementById('popup').style.display = 'flex';
-    }
-
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
-
-    function sendNote() {
-        alert('Note sent!');
-        closePopup();
-        updateResults(); // Update results when note is saved
-    }
-
-    function periodOnTime() {
-        alert('Period is on time!');
-        updateResults(); // Update results when note is saved
-    }
-
-    function recordDate(type) {
-        const dateInputId = type === 'Start' ? 'datePicker1' : 'datePicker2';
-        const date = document.getElementById(dateInputId).value;
-        alert(`Recorded ${type} Date: ${date}`);
-        updateResults(); // Update results when note is saved
-    }
-
-    function saveSymptom(type) {
-        const selectedSymptom = document.getElementById('symptoms').value;
-        alert(`Your symptom is: ${selectedSymptom}`);
-        updateResults(); // Update results when note is saved
-    }
-
-    let recordedStartDate = '';
-    let recordedEndDate = '';
-
-    function recordDate(type) {
-        const dateInputId = type === 'Start' ? 'datePicker1' : 'datePicker2';
-        const date = document.getElementById(dateInputId).value;
-
-        // Store the recorded dates
-        if (type === 'Start') {
-            recordedStartDate = date;
-        } else {
-            recordedEndDate = date;
-        }
-
-        alert(`Recorded ${type} Date: ${date}`);
-        updateResults(); // Update results when a date is recorded
-    }
-
-    function updateResults() {
-        // Check if results have already been sent
-        if (resultSent) {
-            alert('Results already sent!');
-            return;
-        }
-
-        const startDate = document.querySelector('#periodStartDateTable .selected-date');
-        const endDate = document.querySelector('#periodEndDateTable .selected-date');
-        const selectedSymptom = document.getElementById('symptoms').value;
-        const note = document.getElementById('note').value;
-
-        const resultDateDisplay = document.getElementById('resultDateDisplay');
-        const resultSymptomDisplay = document.getElementById('resultSymptomDisplay');
-        const resultNoteDisplay = document.getElementById('resultNoteDisplay');
-
-        // Display the recorded start and end dates
-        resultDateDisplay.innerHTML = `<div class="circle-box"><span>Start Date:</span> ${recordedStartDate}</div>`;
-        resultDateDisplay.innerHTML += `<div class="circle-box"><span>End Date:</span> ${recordedEndDate}</div>`;
-
-        resultSymptomDisplay.innerHTML += `<div class="circle-box"><span>Symptom:</span> ${selectedSymptom}</div>`;
-        resultNoteDisplay.innerHTML += note ? `<div class="circle-box"><span>Note:</span> ${note}</div>` : '';
-
-        // Set the flag to true, indicating that results have been sent
-        resultSent = true;
-    }
-
-    function clearResults() {
-        recordedStartDate = '';
-        recordedEndDate = '';
-
-        document.getElementById('resultDateDisplay').innerHTML = '';
-        document.getElementById('resultSymptomDisplay').innerHTML = '';
-        document.getElementById('resultNoteDisplay').innerHTML = '';
-
-        // Reset the flag when clearing results
-        resultSent = false;
-    }
-
-    </script>
-</body>
-</html>
+        
+            let timer;
+            let seconds = 0;
+            let savedTimers = [];
+        
+            function startTimer() {
+                timer = setInterval(function() {
+                    seconds++;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        
+            function stopTimer() {
+                clearInterval(timer);
+            }
+        
+            function resetTimer() {
+                clearInterval(timer);
+                seconds = 0;
+                updateTimerDisplay();
+            }
+        
+            function updateTimerDisplay() {
+                const hours = Math.floor(seconds / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const remainingSeconds = seconds % 60;
+        
+                const formattedTime = padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
+        
+                document.getElementById('myTimer').innerHTML = formattedTime;
+            }
+        
+            function padNumber(number) {
+                return (number < 10 ? '0' : '') + number;
+            }
+        
+            function saveTimer() {
+                const latestTimer = document.getElementById('myTimer').innerHTML;
+                savedTimers.push(latestTimer);
+                alert('Timer saved: ' + latestTimer);
+        
+                // Display the saved time in the pop-up
+                showPopup('Timer saved: ' + latestTimer);
+            }
+        
+            function showPopup(message) {
+                const popup = document.getElementById('popup');
+                const popupContent = popup.querySelector('.popup-content');
+                const popupMessage = popupContent.querySelector('h2');
+        
+                // Set the message in the popup
+                popupMessage.textContent = message;
+        
+                // Display the pop-up
+                popup.style.display = 'flex';
+            }
+        
+            function closePopup() {
+                document.getElementById('popup').style.display = 'none';
+            }
+        </script>
+        
+    
+    </body>
+    </html>
