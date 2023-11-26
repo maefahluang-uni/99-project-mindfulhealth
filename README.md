@@ -3,9 +3,8 @@ Project "MindfulHealth"
 
 Member's ID and name.
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
 | ID           | Name           | Github Profile|
+| :---         |     :---:      |          ---: |
 | 6531503106     | Tanatcha Patomrotjanawong       | https://github.com/Tanatcha-Patomrotjanawong |
 | 6531503109     | Tirapat Saetiao       | https://github.com/Tirapat-Saetiao     |
 | 6531503114     | Ponsatron Phooduong       | https://github.com/ponsatron-phooduong    |
