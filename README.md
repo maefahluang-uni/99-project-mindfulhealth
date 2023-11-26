@@ -57,6 +57,7 @@ Users access the "Medication" section. Within this section, users can:
 1. The user inputs information about their menstruation.
 2. The system will warn them about unnormal cycle.
    ![Screenshot 2023-11-26 233236](https://github.com/maefahluang-uni/99-project-mindfulhealth/assets/122962767/13c53f78-8817-4b8a-9640-cfe041e2dcf2)
+   
 
 ## Source code to get in to our project!
 https://lab-cd-lubxl65mwq-uc.a.run.app/welcome
