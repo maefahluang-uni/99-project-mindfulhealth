@@ -22,7 +22,7 @@ steps:
    - '--port'
    - '8100'
 images:
- - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/webdev-dockers/lab-cd'
+ - 'us-central1-docker.pkg.dev/${_PROJECT_ID}/webdev-dockers/mindfulhealth'
 
 substitutions:
   _PROJECT_ID: 'mindfulhealth-405809'
