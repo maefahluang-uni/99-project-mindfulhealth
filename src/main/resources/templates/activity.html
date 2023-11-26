@@ -272,6 +272,127 @@
     <a href="/menstrual"><button><svg fill="#3b3e40" width="30px" height="30px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32zm0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32zm-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32zm0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32z"></path></g></svg></button></a>
 
 </div>
+<div class="container">
+    <h1>Activity</h1>
 
-    <div class="container">
-        <h1>Activity</h1>
+      <!-- Main Page -->
+      <div class="page" id="mainPage">
+        <div class="main-buttons">
+            <button onclick="goToPage('page1')">Start Focus mode</button>
+
+        </div>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page" id="page1">
+        <div class="box-container">
+            <div class="popup-buttons">
+            <div class="box">
+                <label>Count Up Timer</label>
+
+                <iframe src="https://giphy.com/embed/Re1J2OtYYGk78oP155" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ghost-boo-boogie-Re1J2OtYYGk78oP155"></a></p>
+               
+             <h1 id="myTimer">00:00:00</h1>
+
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <button onclick="resetTimer()">Reset</button>
+            <button onclick="saveTimer()">Save</button>
+            </div>
+        </div>
+        <div class="options">
+            <button onclick="goToPage('mainPage')">Back</button>
+            
+        </div>
+                
+            </div>
+        </div>
+    </div>
+
+     <!-- Popup for "Not On Time" -->
+     <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Not On Time</h2>
+            <label for="note">Write a note:</label>
+            <textarea id="note"></textarea>
+            <div class="popup-buttons">
+                <button class="send-btn" onclick="sendNote()">Send</button>
+                <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 'mainPage';
+        let resultSent = false; // Flag to track whether result has been sent
+    
+        function goToPage(page) {
+            document.getElementById(currentPage).style.display = 'none';
+            document.getElementById(page).style.display = 'block';
+            currentPage = page;
+        }
+    
+        let timer;
+        let seconds = 0;
+        let savedTimers = [];
+    
+        function startTimer() {
+            timer = setInterval(function() {
+                seconds++;
+                updateTimerDisplay();
+            }, 1000);
+        }
+    
+        function stopTimer() {
+            clearInterval(timer);
+        }
+    
+        function resetTimer() {
+            clearInterval(timer);
+            seconds = 0;
+            updateTimerDisplay();
+        }
+    
+        function updateTimerDisplay() {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const remainingSeconds = seconds % 60;
+    
+            const formattedTime = padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
+    
+            document.getElementById('myTimer').innerHTML = formattedTime;
+        }
+    
+        function padNumber(number) {
+            return (number < 10 ? '0' : '') + number;
+        }
+    
+        function saveTimer() {
+            const latestTimer = document.getElementById('myTimer').innerHTML;
+            savedTimers.push(latestTimer);
+            alert('Timer saved: ' + latestTimer);
+    
+            // Display the saved time in the pop-up
+            showPopup('Timer saved: ' + latestTimer);
+        }
+    
+        function showPopup(message) {
+            const popup = document.getElementById('popup');
+            const popupContent = popup.querySelector('.popup-content');
+            const popupMessage = popupContent.querySelector('h2');
+    
+            // Set the message in the popup
+            popupMessage.textContent = message;
+    
+            // Display the pop-up
+            popup.style.display = 'flex';
+        }
+    
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+    
+
+</body>
+</html>
