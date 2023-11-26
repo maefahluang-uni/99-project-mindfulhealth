@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Menstrual Tracking</title>
+    <title>Activity</title>
     <style>
           body {
             background-color: #9cc5e7;
@@ -73,7 +73,7 @@
             margin-top: 20px;
             box-sizing: border-box;
             width: 100%;
-            max-width: 600px;
+            max-width: 800px;
             position: relative;
             text-align: center; 
         }
@@ -255,6 +255,101 @@
         .sidebar button:hover {
             background-color: #ccc;
         }
+        .page1-form {
+            text-align: center;
+        }
+        .page1-form label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: #3b3e40;
+        }
+        .page1-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #d3d3d3;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        .page1-form button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 15px;
+            cursor: pointer;
+            background-color: #4caf50;
+            border: 2px solid #000;
+            color: rgb(255, 254, 235);
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .page1-form button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            font-size: 20px;
+            text-align: center;
+            color: #3b3e40;
+            margin-top: 20px;
+            display: block;
+        }
+        .popup-result {
+            display: none;
+            background: rgb(255, 254, 235);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .info-box {
+            border: 1px solid #9cc5e7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            text-align: left;
+            color: #f45757
+        }
+        .category-box {
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+    .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 15px;
+        }
+        .options button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: #9cc5e7;
+            border: 2px solid #000;
+            color: rgb(255, 254, 235);
+        }
+        .options button:hover {
+            background-color: #9cc5e7;
+        }
+
+    </style>
+</head>
+<body>
 
   
     </style>
@@ -276,123 +371,227 @@
     <h1>Activity</h1>
 
       <!-- Main Page -->
+      <div class="box-container">
       <div class="page" id="mainPage">
+        <div class="box-text">
         <div class="main-buttons">
-            <button onclick="goToPage('page1')">Start Focus mode</button>
-
+            <div class="box">
+                <button onclick="goToPage('page1')">BMI calculation</button>
+                <br>
+                <br>
+                <button onclick="goToPage('page2')">Activity Recomendation</button>
+                <br>
+                <br>
+                <div class="info-box">
+                    <h2>What is BMI?</h2>
+                    <p>
+                        Body mass index (BMI) is a measure of body fat based on height and weight. It is used to screen for weight problems that may lead to health problems. BMI is calculated by dividing your weight in kilograms by your height in meters squared.
+                    </p>
+            
+                    <h2>What are the BMI Categories?</h2>
+                    <p>
+                        The World Health Organization (WHO) has categorized BMI as follows:
+                    </p>
+                    <ul>
+                        <li>Underweight: Less than 18.5</li>
+                        <li>Normal weight: 18.5 to 24.9</li>
+                        <li>Overweight: 25 to 29.9</li>
+                        <li>Obese: 30 or more</li>
+                    </ul>
+            
+                    <h2>What are the Health Risks of BMI?</h2>
+                    <p>
+                        BMI is associated with a number of health risks, including:
+                    </p>
+                    <ul>
+                        <li>Heart disease</li>
+                        <li>Stroke</li>
+                        <li>Type 2 diabetes</li>
+                        <li>High blood pressure</li>
+                        <li>Certain cancers</li>
+                    </ul>
+            
+                    <h2>How Can I Improve My BMI?</h2>
+                    <p>
+                        If you are overweight or obese, you can improve your BMI by:
+                    </p>
+                    <ul>
+                        <li>Eating a healthy diet</li>
+                        <li>Getting regular exercise</li>
+                    </ul>
+                </div>
+            
+                <div class="info-box">
+                    <h2>What is Body Fat?</h2>
+                    <p>
+                        Body fat is a type of tissue that stores energy. It is important for many bodily functions, such as insulation, cushioning, and hormone production. However, too much body fat can be harmful to your health.
+                    </p>
+            
+                    <h2>How is Body Fat Distributed?</h2>
+                    <p>
+                        Body fat is distributed differently in men and women. Men tend to store more body fat in their abdomens, while women tend to store more body fat in their hips and thighs.
+                    </p>
+            
+                    <h2>How Can I Reduce Body Fat?</h2>
+                    <p>
+                        The best way to reduce body fat is to eat a healthy diet and get regular exercise. You can also reduce body fat by:
+                    </p>
+                    <ul>
+                        <li>Limiting your intake of processed foods</li>
+                        <li>Eating more fruits, vegetables, and whole grains</li>
+                        <li>Getting at least 30 minutes of moderate-intensity exercise most days of the week</li>
+                    </ul>
+                </div>
+            
+                <div class="info-box">
+                    <h2>What is Weight Management?</h2>
+                    <p>
+                        Weight management is the process of maintaining a healthy weight. It is important for overall health and well-being.
+                    </p>
+            
+                    <h2>What are the Benefits of Weight Management?</h2>
+                    <p>
+                        Weight management can help to:
+                    </p>
+                    <ul>
+                        <li>Reduce your risk of developing chronic diseases</li>
+                        <li>Improve your quality of life</li>
+                        <li>Boost your energy levels</li>
+                        <li>Improve your self-esteem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
+    
 
     <!-- Page 1 -->
     <div class="page" id="page1">
-        <div class="box-container">
-            <div class="popup-buttons">
+        <div class="page1-form">
             <div class="box">
-                <label>Count Up Timer</label>
+            <label for="weight">Weight (kg):</label>
+            <input type="text" id="weight" placeholder="Enter your weight" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
 
-                <iframe src="https://giphy.com/embed/Re1J2OtYYGk78oP155" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ghost-boo-boogie-Re1J2OtYYGk78oP155"></a></p>
-               
-             <h1 id="myTimer">00:00:00</h1>
+            <label for="height">Height (cm):</label>
+            <input type="text" id="height" placeholder="Enter your height" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
 
-            <button onclick="startTimer()">Start</button>
-            <button onclick="stopTimer()">Stop</button>
-            <button onclick="resetTimer()">Reset</button>
-            <button onclick="saveTimer()">Save</button>
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div class="options">
+        <button onclick="goToPage('mainPage')">Back</button>
+</div>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <div class="page1-form">
+        <div class="box">
+        <div class="info-box">
+            <h2>Underweight (BMI &lt; 18.5)</h2>
+            <div class="category-box">
+                <p><strong>Nutrition:</strong> Focus on increasing calorie intake by consuming nutrient-dense foods, such as lean proteins, whole grains, healthy fats, and fruits and vegetables. Consider working with a registered dietitian to develop a personalized meal plan.</p>
+                <p><strong>Strength training:</strong> Engage in regular strength training exercises to build muscle mass and promote a healthy metabolism. Start with light weights and gradually increase the intensity as you get stronger.</p>
+                <p><strong>Rest and recovery:</strong> Ensure adequate rest and sleep to allow your body to recover and grow. Aim for 7-8 hours of quality sleep each night.</p>
             </div>
         </div>
+    
+        <div class="info-box">
+            <h2>Normal (BMI 18.5 - 22.9)</h2>
+            <div class="category-box">
+                <p><strong>Maintain a balanced diet:</strong> Continue to consume a balanced diet rich in whole, unprocessed foods to maintain a healthy weight and overall well-being.</p>
+                <p><strong>Regular physical activity:</strong> Engage in regular physical activity, aiming for at least 30 minutes of moderate-intensity exercise most days of the week. Find activities you enjoy, such as brisk walking, swimming, or dancing.</p>
+                <p><strong>Prioritize stress management:</strong> Practice stress-reducing techniques, such as yoga, meditation, or deep breathing exercises, to manage stress levels and promote overall well-being.</p>
+            </div>
+        </div>
+    
+        <div class="info-box">
+            <h2>Overweight (BMI 23 - 24.9)</h2>
+            <div class="category-box">
+                <p><strong>Moderate calorie reduction:</strong> Consider making small, gradual changes to your diet to create a moderate calorie deficit, such as reducing portion sizes or opting for healthier food choices.</p>
+                <p><strong>Increase physical activity:</strong> Aim to increase your physical activity level to at least 150 minutes of moderate-intensity exercise per week. Consider incorporating strength training exercises into your routine.</p>
+                <p><strong>Consult a healthcare professional:</strong> Seek guidance from a registered dietitian or healthcare provider to develop a personalized plan for weight management and overall health.</p>
+            </div>
+        </div>
+    
+        <div class="info-box">
+            <h2>Obese I (BMI 25 - 29.9)</h2>
+            <div class="category-box">
+                <p><strong>Significant calorie reduction:</strong> Implement a more significant calorie deficit by making substantial changes to your diet, such as reducing portion sizes, limiting processed foods, and increasing consumption of fruits, vegetables, and whole grains.</p>
+                <p><strong>Structured exercise plan:</strong> Develop a structured exercise plan with the help of a certified personal trainer or fitness professional. Aim for at least 150 minutes of moderate-intensity exercise per week, gradually increasing the intensity and duration as tolerated.</p>
+                <p><strong>Behavioral changes:</strong> Identify and address any behavioral patterns that contribute to weight gain, such as emotional eating or unhealthy food choices. Seek support from a therapist or counselor if needed.</p>
+            </div>
+        </div>
+    
+        <div class="info-box">
+            <h2>Obese II (BMI 30 or above)</h2>
+            <div class="category-box">
+                <p><strong>Seek medical supervision:</strong> Consult with a healthcare professional to develop a comprehensive weight management plan that may include medical interventions, such as medication or bariatric surgery, in addition to lifestyle modifications.</p>
+                <p><strong>Intensive lifestyle changes:</strong> Implement significant lifestyle changes, including a strict calorie-controlled diet, regular exercise, and behavioral modifications, with the close guidance of healthcare professionals.</p>
+                <p><strong>Psychological support:</strong> Seek support from therapists or counselors to address any underlying psychological issues that may contribute to weight gain and provide coping mechanisms for emotional eating and unhealthy habits.</p>
+            </div>
+        </div>
+    </div>
         <div class="options">
             <button onclick="goToPage('mainPage')">Back</button>
-            
-        </div>
-                
-            </div>
-        </div>
     </div>
-
-     <!-- Popup for "Not On Time" -->
-     <div class="popup" id="popup">
-        <div class="popup-content">
-            <h2>Not On Time</h2>
-            <label for="note">Write a note:</label>
-            <textarea id="note"></textarea>
-            <div class="popup-buttons">
-                <button class="send-btn" onclick="sendNote()">Send</button>
-                <button class="cancel-btn" onclick="closePopup()">Cancel</button>
-            </div>
-        </div>
     </div>
+</div>
 
-    <script>
-        let currentPage = 'mainPage';
-        let resultSent = false; // Flag to track whether result has been sent
+<!-- Page 3 -->
+<div class="page" id="page3">
+    <div class="page3-form">
+        <h1>Random Activity Generator</h1>
     
-        function goToPage(page) {
-            document.getElementById(currentPage).style.display = 'none';
-            document.getElementById(page).style.display = 'block';
-            currentPage = page;
-        }
-    
-        let timer;
-        let seconds = 0;
-        let savedTimers = [];
-    
-        function startTimer() {
-            timer = setInterval(function() {
-                seconds++;
-                updateTimerDisplay();
-            }, 1000);
-        }
-    
-        function stopTimer() {
-            clearInterval(timer);
-        }
-    
-        function resetTimer() {
-            clearInterval(timer);
-            seconds = 0;
-            updateTimerDisplay();
-        }
-    
-        function updateTimerDisplay() {
-            const hours = Math.floor(seconds / 3600);
-            const minutes = Math.floor((seconds % 3600) / 60);
-            const remainingSeconds = seconds % 60;
-    
-            const formattedTime = padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
-    
-            document.getElementById('myTimer').innerHTML = formattedTime;
-        }
-    
-        function padNumber(number) {
-            return (number < 10 ? '0' : '') + number;
-        }
-    
-        function saveTimer() {
-            const latestTimer = document.getElementById('myTimer').innerHTML;
-            savedTimers.push(latestTimer);
-            alert('Timer saved: ' + latestTimer);
-    
-            // Display the saved time in the pop-up
-            showPopup('Timer saved: ' + latestTimer);
-        }
-    
-        function showPopup(message) {
-            const popup = document.getElementById('popup');
-            const popupContent = popup.querySelector('.popup-content');
-            const popupMessage = popupContent.querySelector('h2');
-    
-            // Set the message in the popup
-            popupMessage.textContent = message;
-    
-            // Display the pop-up
-            popup.style.display = 'flex';
-        }
-    
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
-    
+        <div id="activity-display">Click the button to get a random activity!</div>
+        
+        <button id="random-button" onclick="getRandomActivity()">Get Random Activity</button>    
+</div>
+</div>
+<div class="options">
+    <button onclick="goToPage('mainPage')">Back</button>
+</div>
+</div>
+</div>
 
-</body>
-</html>
+    </body>
+    </html>
+        <script>
+            let currentPage = 'mainPage';
+            let resultSent = false; // Flag to track whether result has been sent
+        
+            function goToPage(page) {
+                document.getElementById(currentPage).style.display = 'none';
+                document.getElementById(page).style.display = 'block';
+                currentPage = page;
+            }
+        
+            function calculateBMI() {
+                var weight = document.getElementById('weight').value;
+                var height = document.getElementById('height').value;
+        
+                var bmi = weight / ((height / 100) ** 2);
+                var resultElement = document.getElementById('result');
+        
+                if (bmi < 18.5) {
+                    resultElement.innerHTML = 'BMI: ' + bmi.toFixed(2) + ' - Underweight';
+                } else if (bmi >= 18.5 && bmi <= 22.9) {
+                    resultElement.innerHTML = 'BMI: ' + bmi.toFixed(2) + ' - Normal';
+                } else if (bmi >= 23 && bmi <= 24.9) {
+                    resultElement.innerHTML = 'BMI: ' + bmi.toFixed(2) + ' - Overweight';
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    resultElement.innerHTML = 'BMI: ' + bmi.toFixed(2) + ' - Obese I';
+                } else {
+                    resultElement.innerHTML = 'BMI: ' + bmi.toFixed(2) + ' - Obese II';
+                }
+        
+                // Display pop-up result
+                document.getElementById('popupResult').style.display = 'block';
+            }
+        
+        </script>
+        
+        </body>
+        </html>
