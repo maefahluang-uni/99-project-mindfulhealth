@@ -63,4 +63,6 @@ Users access the "Medication" section. Within this section, users can:
 https://lab-cd-lubxl65mwq-uc.a.run.app/welcome
 
 
+## Here is QR-code. Let's try!
+![image](https://github.com/maefahluang-uni/99-project-mindfulhealth/assets/122962767/dfff7a5e-0eb1-4e99-b0f1-527ca1f0c31d)
 
