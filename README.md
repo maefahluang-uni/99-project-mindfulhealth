@@ -1,18 +1,19 @@
 Project "MindfulHealth"
 =============
-Please use this template for your project.
 
-List your group's member's below with ID and name.
+Member's ID and name.
 
-1. Tanatcha Patomrotjanawong (6531503106)
-2. Tirapat Saetiao (6531503109)
-3. Ponsatron Phooduong (6531503114)
-4. Pirada Sukharom (6531503116)
-5. Setsawat Donchai (6531503126)
-6. Angkhana Srithep (6031305069)
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| ID           | Name           | Github Profile|
+| 6531503106     | Tanatcha Patomrotjanawong       | https://github.com/Tanatcha-Patomrotjanawong |
+| 6531503109     | Tirapat Saetiao       | https://github.com/Tirapat-Saetiao     |
+| 6531503114     | Ponsatron Phooduong       | https://github.com/ponsatron-phooduong    |
+| 6531503116     | Pirada Sukharom       | https://github.com/Pirada-Sukharom   |
+| 6531503126     |  Setsawat Donchai      | https://github.com/Setsawat-Donchai     |
+| 6031305069     | Angkhana Srithep       | https://github.com/Tirapat-Saetiao      |
 
-
-## Login
+## Welcome
 1.The user inputs their information.
 2.Check information.
 3.Confirm the information.  
