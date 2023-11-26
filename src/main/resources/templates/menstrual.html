@@ -26,7 +26,6 @@
         .page {
             display: none;
             height: 50vh;
-            width: 800px;
             overflow-y: auto;
         }
         #mainPage {
@@ -51,8 +50,16 @@
             border: 2px;
             background-color: #0a1e2b;
         }
-
-
+        .date-display {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #3b3e40;
+        }
+        .date-display span {
+            font-weight: bold;
+            display: block;
+        }
         .box-container {
             display: flex;
             flex-direction: column;
@@ -65,16 +72,43 @@
             padding: 20px;
             margin-top: 20px;
             box-sizing: border-box;
-            width: 2000%;
-            max-width: 1300px;
+            width: 100%;
+            max-width: 800px;
             position: relative;
-            text-align: center; 
+            text-align: left; 
         }
         .box label {
             font-size: 18px;
             margin-bottom: 10px;
             display: block;
             color: #3b3e40;
+        }
+        .box-pg2 {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 910px;
+            position: relative;
+            text-align: center; 
+        }
+        .box-pg2 label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            color: #3b3e40;
+        }
+        .box-pg2 input, .box select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #d3d3d3;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
         }
         .box input, .box select {
             width: calc(100% - 20px);
@@ -118,6 +152,28 @@
         .record-button:hover {
             background-color: #45a049;
         }
+        .options-2 {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 80px;
+            right: 20px;
+            border-radius: 15px;
+        }
+        .options-2 button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: #f45757;
+            border: 2px solid #000;
+            color: rgb(255, 254, 235);
+        }
+        .options-2 button:hover {
+            background-color: #f45757;
+        }
         .options {
             display: flex;
             flex-direction: column;
@@ -153,25 +209,11 @@
         }
         .popup-content {
             background: rgb(255, 254, 235);
-            padding: 20px;
+            padding: 50px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             position: relative;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            padding: 10px;
-            background-color: #9cc5e7;
-            color: rgb(255, 254, 235);
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-        .close-btn:hover {
-            background-color: #9cc5e7;
         }
         .close-btn {
             position: absolute;
@@ -262,8 +304,12 @@
         .sidebar button:hover {
             background-color: #ccc;
         }
-       
-
+        .info-box {
+            border: 1px solid #9cc5e7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
   
     </style>
 </head>
@@ -282,126 +328,239 @@
 </div>
 
     <div class="container">
-        <h1>Focus Mode</h1>
+        <h1>Menstrual Tracking</h1>
 
-          <!-- Main Page -->
-          <div class="page" id="mainPage">
+        <!-- Main Page -->
+        <div class="page" id="mainPage">
             <div class="main-buttons">
-                <button onclick="goToPage('page1')">Start Focus mode</button>
-
+                <div class="box">
+                <button onclick="goToPage('page1')">Date calculate</button>
+                <br>
+                <br>
+                <div class="info-box">
+                    <h2>Typical Menstrual Cycle</h2>
+                    <p>
+                        The average menstrual cycle is about 28 days long, but it can vary from person to person. A normal menstrual cycle can range from 21 to 35 days. Your period is the time when you bleed from your vagina. This bleeding happens when the lining of your uterus sheds. The lining of your uterus builds up each month in preparation for pregnancy. If you don't get pregnant, the lining sheds and you get your period.
+                    </p>
+                    <p>
+                        Your period usually lasts for 3 to 7 days. The amount of blood you lose can vary from person to person. Some people only have light bleeding, while others have heavy bleeding.
+                    </p>
+                </div>
+            
+                <div class="info-box">
+                    <h2>Irregular Periods</h2>
+                    <p>
+                        Sometimes, periods can be irregular. This means that your period may come early, late, or be heavier or lighter than usual. Irregular periods can be caused by a number of things, including:
+                    </p>
+                    <ul>
+                        <li>Stress</li>
+                        <li>Weight changes</li>
+                        <li>Exercise</li>
+                        <li>Certain medications</li>
+                        <li>Medical conditions such as polycystic ovary syndrome (PCOS) or endometriosis</li>
+                    </ul>
+                    <p>
+                        If you have irregular periods, it's important to see a doctor to rule out any underlying medical conditions.
+                    </p>
+                </div>
+            
+                <div class="info-box">
+                    <h2>What to Do If Your Period Is Late</h2>
+                    <p>
+                        There are a few things you can do if your period is late:
+                    </p>
+                    <ul>
+                        <li>Wait a few days. Sometimes, periods can be a few days late for no reason.</li>
+                        <li>Take a home pregnancy test. If you're sexually active, it's important to rule out pregnancy.</li>
+                        <li>See a doctor. If your period is more than 3 weeks late, see a doctor to rule out any underlying medical conditions.</li>
+                    </ul>
+                </div>
+            
+                <div class="info-box">
+                    <h2>What to Do If Your Period Is Heavy or Light</h2>
+                    <p>
+                        There are a few things you can do if your period is heavy or light:
+                    </p>
+                    <ul>
+                        <li>Use over-the-counter pain relievers such as ibuprofen or naproxen.</li>
+                        <li>Use menstrual products that can absorb a lot of blood, such as tampons or maxi pads.</li>
+                        <li>See a doctor. If your period is so heavy that you soak through a pad or tampon every hour, or if your period is so light that you only bleed for a day or two, see a doctor to rule out any underlying medical conditions.</li>
+                    </ul>
+                </div>
+            
+                <div class="info-box">
+                    <h2>Additional Tips</h2>
+                    <ul>
+                        <li>Keep a track of your periods. This can help you identify any patterns or changes in your cycle.</li>
+                        <li>Talk to your doctor about any concerns you have about your period.</li>
+                        <li>Get regular exercise and eat a healthy diet. This can help regulate your cycle and reduce symptoms such as cramps.</li>
+                        <li>Manage stress. Stress can trigger irregular periods and make symptoms worse.</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </div>
 
         <!-- Page 1 -->
         <div class="page" id="page1">
             <div class="box-container">
-                <div class="popup-buttons">
-                <div class="box">
-                    <label>Count Up Timer</label>
+                <div class="box-pg2">
+                    <h1>Menstrual Duration Calculator</h1>
 
-                    <iframe src="https://giphy.com/embed/Re1J2OtYYGk78oP155" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ghost-boo-boogie-Re1J2OtYYGk78oP155"></a></p>
-                   
-                 <h1 id="myTimer">00:00:00</h1>
-
-                <button onclick="startTimer()">Start</button>
-                <button onclick="stopTimer()">Stop</button>
-                <button onclick="resetTimer()">Reset</button>
-                <button onclick="saveTimer()">Save</button>
-                </div>
-            </div>
-            <div class="options">
-                <button onclick="goToPage('mainPage')">Back</button>
+                    <label for="startDate">First Day of Period:</label>
+                    <input type="date" id="startDate">
                 
-            </div>
+                    <label for="endDate">Last Day of Period:</label>
+                    <input type="date" id="endDate">
+                
+                    <button class="save-button" onclick="calculateDuration(), showPopup()">Save</button>
+                </div>
+                <div class="options-2">
+                    <button onclick="goToPage('page2')">Warning</button>    
+                </div>
+                <br>
+                <br>
+                <div class="options">
+                    <button onclick="goToPage('mainPage')">Back</button>
                     
                 </div>
             </div>
         </div>
+               <!-- Popup for "Not On Time" -->
+               <div class="popup" id="popup">
+                <div class="popup-content">
+                    <h2>Result</h2>
+                    <p id="result"></p>
+                    <div class="popup-buttons">
+                        <button class="cancel-btn" onclick="closePopup()">Close</button>
+                    </div>
+                </div>
+            </div>
 
-         <!-- Popup for "Not On Time" -->
-         <div class="popup" id="popup">
-            <div class="popup-content">
-                <h2>Not On Time</h2>
-                <label for="note">Write a note:</label>
-                <textarea id="note"></textarea>
-                <div class="popup-buttons">
-                    <button class="send-btn" onclick="sendNote()">Send</button>
-                    <button class="cancel-btn" onclick="closePopup()">Cancel</button>
+        <!-- Page 2 -->
+        <div class="page" id="page2">
+            <div class="box-container">
+                <div class="box">
+                    <div class="info-box">
+                        <h2>Irregular Menstrual Periods</h2>
+                        <p>
+                            A period that lasts longer than seven days is considered irregular and may be a sign of an underlying health condition. If you are experiencing a period that lasts longer than eight days, you should see your doctor to rule out any serious causes.
+                        </p>
+                
+                        <h3>Things to be aware of if your period lasts more than eight days:</h3>
+                        <ul>
+                            <li><strong>Heavy bleeding:</strong> If you are soaking through a pad or tampon every hour for two to three hours, or passing large clots, see your doctor.</li>
+                            <li><strong>Painful cramps:</strong> If severe cramps are not relieved by over-the-counter pain medication, see your doctor.</li>
+                            <li><strong>Spotting or bleeding between periods:</strong> See your doctor if you experience spotting or bleeding between periods.</li>
+                            <li><strong>Changes in your menstrual cycle:</strong> If your menstrual cycle has suddenly changed, see your doctor.</li>
+                        </ul>
+                
+                        <h3>See your doctor if you are:</h3>
+                        <ul>
+                            <li>Pregnant or trying to become pregnant</li>
+                            <li>Experiencing fatigue or weakness</li>
+                            <li>Having trouble sleeping</li>
+                            <li>Losing weight without trying</li>
+                            <li>Having trouble concentrating</li>
+                            <li>Experiencing mood swings</li>
+                        </ul>
+                
+                        <h3>Possible causes of a period lasting longer than eight days:</h3>
+                        <ul>
+                            <li>Hormonal imbalance</li>
+                            <li>Ovulation disorders</li>
+                            <li>Uterine fibroids or polyps</li>
+                            <li>Adenomyosis</li>
+                            <li>Thyroid condition</li>
+                            <li>Bleeding condition</li>
+                            <li>Obesity</li>
+                            <li>Pelvic inflammatory disease (PID)</li>
+                        </ul>
+                
+                        <h3>Treatment:</h3>
+                        <p>
+                            Treatment will depend on the underlying cause. It may include medication, surgery, weight loss, or antibiotics. Early diagnosis and treatment can help prevent complications and improve overall health.
+                        </p>
+                    </div>
+                </div>
+                <div class="options">
+                    <button onclick="goToPage('mainPage')">Back</button>
                 </div>
             </div>
         </div>
+</body>
+</html>
+
+
+    <script>
+let currentPage = 'mainPage';
+    let resultSent = false; // Flag to track whether result has been sent
+
+    function goToPage(page) {
+        document.getElementById(currentPage).style.display = 'none';
+        document.getElementById(page).style.display = 'block';
+        currentPage = page;
+    }
+
+    function calculateDuration() {
+            // Get the values of the input fields
+            var startDate = new Date(document.getElementById('startDate').value);
+            var endDate = new Date(document.getElementById('endDate').value);
+
+            // Check if both dates are valid
+            if (isNaN(startDate) || isNaN(endDate)) {
+                alert('Please select valid dates.');
+                return;
+            }
+
+            // Calculate the duration in days
+            var durationInMilliseconds = endDate - startDate;
+            var durationInDays = durationInMilliseconds / (1000 * 60 * 60 * 24);
+
+            // Display the result
+            document.getElementById('result').innerText = 'Duration: ' + durationInDays + ' days';
+        }
+        function calculateDuration() {
+            // Get the values of the input fields
+            var startDate = new Date(document.getElementById('startDate').value);
+            var endDate = new Date(document.getElementById('endDate').value);
+
+            // Check if both dates are valid
+            if (isNaN(startDate) || isNaN(endDate)) {
+                alert('Please select valid dates.');
+                return;
+            }
+
+            // Calculate the duration in days
+            var durationInMilliseconds = endDate - startDate;
+            var durationInDays = durationInMilliseconds / (1000 * 60 * 60 * 24);
+
+            // Display the result
+            document.getElementById('result').innerText = 'Duration: ' + durationInDays + ' days';
+
+            // Define the normal range for a period (you can adjust this based on your criteria)
+            var normalMinDuration = 3;
+            var normalMaxDuration = 8;
+
+            // Check if the calculated duration is outside the normal range
+            if (durationInDays >= normalMinDuration && durationInDays <= normalMaxDuration) {
+                // Display a positive message
+                document.getElementById('result').innerHTML += '<br><strong>Good!:</strong> Your period duration is within the normal range!';
+            } else {
+                // Display a warning message
+                document.getElementById('result').innerHTML += '<br><strong>Warning!:</strong> Your period duration is outside the normal range. Please consult with a healthcare professional.';
+            }
+        }
+    function showPopup() {
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
     
-        <script>
-            let currentPage = 'mainPage';
-            let resultSent = false; // Flag to track whether result has been sent
-        
-            function goToPage(page) {
-                document.getElementById(currentPage).style.display = 'none';
-                document.getElementById(page).style.display = 'block';
-                currentPage = page;
-            }
-        
-            let timer;
-            let seconds = 0;
-            let savedTimers = [];
-        
-            function startTimer() {
-                timer = setInterval(function() {
-                    seconds++;
-                    updateTimerDisplay();
-                }, 1000);
-            }
-        
-            function stopTimer() {
-                clearInterval(timer);
-            }
-        
-            function resetTimer() {
-                clearInterval(timer);
-                seconds = 0;
-                updateTimerDisplay();
-            }
-        
-            function updateTimerDisplay() {
-                const hours = Math.floor(seconds / 3600);
-                const minutes = Math.floor((seconds % 3600) / 60);
-                const remainingSeconds = seconds % 60;
-        
-                const formattedTime = padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
-        
-                document.getElementById('myTimer').innerHTML = formattedTime;
-            }
-        
-            function padNumber(number) {
-                return (number < 10 ? '0' : '') + number;
-            }
-        
-            function saveTimer() {
-                const latestTimer = document.getElementById('myTimer').innerHTML;
-                savedTimers.push(latestTimer);
-                alert('Timer saved: ' + latestTimer);
-        
-                // Display the saved time in the pop-up
-                showPopup('Timer saved: ' + latestTimer);
-            }
-        
-            function showPopup(message) {
-                const popup = document.getElementById('popup');
-                const popupContent = popup.querySelector('.popup-content');
-                const popupMessage = popupContent.querySelector('h2');
-        
-                // Set the message in the popup
-                popupMessage.textContent = message;
-        
-                // Display the pop-up
-                popup.style.display = 'flex';
-            }
-        
-            function closePopup() {
-                document.getElementById('popup').style.display = 'none';
-            }
-        </script>
-        
-    
-    </body>
-    </html>
+
+    </script>
+</body>
+</html>
