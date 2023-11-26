@@ -12,7 +12,7 @@ Member's ID and name.
 | 6531503109     | Tirapat Saetiao       | https://github.com/Tirapat-Saetiao     |
 | 6531503114     | Ponsatron Phooduong       | https://github.com/ponsatron-phooduong    |
 | 6531503126     |  Setsawat Donchai      | https://github.com/Setsawat-Donchai     |
-| 6031305069     | Angkhana Srithep       | https://github.com/Tirapat-Saetiao      |
+| 6031305069     | Angkhana Srithep       | https://github.com/Angkhana6031305069  |
 
 ## Welcome
 1.The user get in to website first page.
