@@ -1,6 +1,9 @@
 Project "MindfulHealth"
 =============
 
+## Source code to get in to our project!
+https://lab-cd-lubxl65mwq-uc.a.run.app/welcome
+
 Member's ID and name.
 
 | ID           | Name           | Github Profile|
@@ -59,10 +62,7 @@ Users access the "Medication" section. Within this section, users can:
    ![Screenshot 2023-11-26 233236](https://github.com/maefahluang-uni/99-project-mindfulhealth/assets/122962767/13c53f78-8817-4b8a-9640-cfe041e2dcf2)
    
 
-## Source code to get in to our project!
-https://lab-cd-lubxl65mwq-uc.a.run.app/welcome
 
-
-## Here is QR-code. Let's try!
+## Here is a QR-code. Let's try!
 ![image](https://github.com/maefahluang-uni/99-project-mindfulhealth/assets/122962767/dfff7a5e-0eb1-4e99-b0f1-527ca1f0c31d)
 
