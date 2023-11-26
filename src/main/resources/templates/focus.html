@@ -52,7 +52,6 @@
             background-color: #0a1e2b;
         }
 
-
         .box-container {
             display: flex;
             flex-direction: column;
@@ -65,10 +64,10 @@
             padding: 20px;
             margin-top: 20px;
             box-sizing: border-box;
-            width: 2000%;
-            max-width: 1300px;
+            width: 100%;
+            max-width: 800px;
             position: relative;
-            text-align: center; 
+            text-align: left; 
         }
         .box label {
             font-size: 18px;
@@ -76,15 +75,22 @@
             display: block;
             color: #3b3e40;
         }
-        .box input, .box select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #d3d3d3;
-            border-radius: 10px;
-            box-sizing: border-box;
-            margin-bottom: 15px;
-        }
+        .box-2 {
+    background-color: #ffffff;
+    width: 90vh;
+    height: 50vh;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+
+.box-2 label {
+    font-size: 18px;
+    margin-bottom: 50px;
+    display: block;
+    color: #3b3e40;
+}
         .date-table {
             width: 100%;
             text-align: center;
@@ -187,18 +193,6 @@
         .close-btn:hover {
             background-color: #9cc5e7;
         }
-        .popup-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-        .popup-buttons button {
-            width: 45%;
-            padding: 15px;
-            font-size: 16px;
-            border-radius: 15px;
-            cursor: pointer;
-        }
         .popup-buttons button.send-btn {
             background-color: #4caf50;
             color: rgb(255, 254, 235);
@@ -262,7 +256,35 @@
         .sidebar button:hover {
             background-color: #ccc;
         }
+
+        .info-box {
+            border: 1px solid #9cc5e7;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
        
+        .popup-buttons {
+            margin-top: 50px;
+            display: flex; 
+            flex-wrap: nowrap;
+        justify-content: space-around; 
+        align-items: center;
+        }
+        .popup-buttons button {
+            background-color: #9cc5e7;
+            color:#ffff;
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .popup-buttons button:hover {
+            border: 2px;
+            background-color: #0a1e2b;
+        }
+
 
   
     </style>
@@ -285,123 +307,227 @@
         <h1>Focus Mode</h1>
 
           <!-- Main Page -->
-          <div class="page" id="mainPage">
-            <div class="main-buttons">
-                <button onclick="goToPage('page1')">Start Focus mode</button>
-
+          <div class="box-container">
+            <div class="page" id="mainPage">
+              <div class="box-text">
+              <div class="main-buttons">
+                  <div class="box">
+                      <button onclick="goToPage('page1')">Focus Mode</button>
+                      <br>
+                      <br>
+                      <button onclick="goToPage('page2')">My Focus</button>
+                      <br>
+                      <br>
+            <div class="info-box">
+                <h2>Focus Mode Benefits</h2>
+                <p>
+                    Focus mode is a feature on many devices that helps you to temporarily silence notifications and distractions so that you can focus on the task at hand. This can be helpful for a variety of activities, such as studying, working, or simply relaxing.
+                </p>
+        
+                <h3>Benefits of Using Focus Mode:</h3>
+                <ul>
+                    <li><strong>Improved productivity:</strong> By silencing notifications and distractions, focus mode can help you to stay on track and complete tasks more quickly.</li>
+                    <li><strong>Reduced stress:</strong> When you are constantly bombarded with notifications, it can be difficult to relax and de-stress. Focus mode can help to create a more peaceful and calming environment.</li>
+                    <li><strong>Enhanced creativity:</strong> When you are focused, you are more likely to be able to generate new ideas and solve problems creatively.</li>
+                    <li><strong>Improved sleep:</strong> If you use focus mode at night, it can help you to wind down and fall asleep more easily.</li>
+                </ul>
+        
+                <p>
+                    In addition to these general benefits, focus mode can also have specific benefits for different activities. For example, if you are studying, focus mode can help you to focus on the material and avoid distractions. If you are working, focus mode can help you to stay on task and meet deadlines. And if you are simply trying to relax, focus mode can help you to create a more peaceful and serene environment.
+                </p>
             </div>
+        
+            <div class="info-box">
+                <h2>Tips for Using Focus Mode Effectively</h2>
+                <ul>
+                    <li><strong>Choose the right time to use it:</strong> Don't try to use focus mode all the time. It is most effective when you are trying to focus on a specific task or activity.</li>
+                    <li><strong>Set a time limit:</strong> Don't use focus mode for too long at a time. After a while, you may start to feel restless or overwhelmed.</li>
+                    <li><strong>Be consistent:</strong> Try to use focus mode regularly. The more you use it, the more effective it will be.</li>
+                    <li><strong>Make it your own:</strong> Customize your focus mode settings so that they work best for you.</li>
+                </ul>
+            </div>
+        
+            <p>
+                If you are looking for ways to improve your productivity, reduce stress, and enhance your creativity, then focus mode is a great tool to try.
+            </p>
         </div>
+        </div>
+    </div>
+</div>
+</div>
 
         <!-- Page 1 -->
         <div class="page" id="page1">
             <div class="box-container">
-                <div class="popup-buttons">
-                <div class="box">
+                <div class="box-2">
                     <label>Count Up Timer</label>
 
                     <iframe src="https://giphy.com/embed/Re1J2OtYYGk78oP155" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ghost-boo-boogie-Re1J2OtYYGk78oP155"></a></p>
                    
                  <h1 id="myTimer">00:00:00</h1>
 
-                <button onclick="startTimer()">Start</button>
-                <button onclick="stopTimer()">Stop</button>
-                <button onclick="resetTimer()">Reset</button>
-                <button onclick="saveTimer()">Save</button>
-                </div>
-            </div>
-            <div class="options">
-                <button onclick="goToPage('mainPage')">Back</button>
-                
-            </div>
-                    
+                 <div class="popup-buttons">
+                    <button onclick="startTimer()">Start</button>
+                    <button onclick="stopTimer()">Stop</button>
+                    <button onclick="resetTimer()">Reset</button>
+                    <button onclick="saveTimer()">Save</button>
                 </div>
             </div>
         </div>
+        <div class="options">
+            <button onclick="goToPage('mainPage')">Back</button>
+        </div>
+    </div>
 
-         <!-- Popup for "Not On Time" -->
-         <div class="popup" id="popup">
-            <div class="popup-content">
-                <h2>Not On Time</h2>
-                <label for="note">Write a note:</label>
-                <textarea id="note"></textarea>
-                <div class="popup-buttons">
-                    <button class="send-btn" onclick="sendNote()">Send</button>
-                    <button class="cancel-btn" onclick="closePopup()">Cancel</button>
-                </div>
-            </div>
+<!-- Popup for "Not On Time" -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <h2>Not On Time</h2>
+        <label for="note">Write a note:</label>
+        <textarea id="note"></textarea>
+        <div class="popup-buttons">
+            <button class="send-btn" onclick="saveTimerWithNote()">Save</button>
+            <button class="cancel-btn" onclick="closePopup()">Cancel</button>
         </div>
-    
-        <script>
-            let currentPage = 'mainPage';
-            let resultSent = false; // Flag to track whether result has been sent
-        
-            function goToPage(page) {
-                document.getElementById(currentPage).style.display = 'none';
-                document.getElementById(page).style.display = 'block';
-                currentPage = page;
+    </div>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+    <div class="box-container">
+        <div class="box-2">
+            <table id="timeTable" class="date-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="clear-button" onclick="clearResults()">Clear</button>
+        </div>
+        </div>
+    </div>
+    <div class="options">
+        <button onclick="goToPage('mainPage')">Back</button>
+    </div>
+</div>
+<script>
+    let currentPage = 'mainPage';
+
+    function goToPage(page) {
+        document.getElementById(currentPage).style.display = 'none';
+        document.getElementById(page).style.display = 'block';
+        currentPage = page;
+    }
+
+    let timer;
+    let seconds = 0;
+    let savedTimers = [];
+
+    function startTimer() {
+        timer = setInterval(function () {
+            seconds++;
+            updateTimerDisplay();
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer);
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        seconds = 0;
+        updateTimerDisplay();
+    }
+
+    function updateTimerDisplay() {
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const remainingSeconds = seconds % 60;
+
+        const formattedTime =
+            padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
+
+        document.getElementById('myTimer').innerHTML = formattedTime;
+    }
+
+    function padNumber(number) {
+        return (number < 10 ? '0' : '') + number;
+    }
+
+    function saveTimer() {
+        const latestTimer = document.getElementById('myTimer').innerHTML;
+        savedTimers.push({
+            timer: latestTimer,
+            notes: [],
+        });
+        alert('Timer saved: ' + latestTimer);
+
+        // Display the saved time in the pop-up
+        showPopup('Timer saved: ' + latestTimer);
+    }
+
+    function showPopup(message) {
+        const popup = document.getElementById('popup');
+        const popupContent = popup.querySelector('.popup-content');
+        const popupMessage = popupContent.querySelector('h2');
+
+        // Set the message in the popup
+        popupMessage.textContent = message;
+
+        // Display the pop-up
+        popup.style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function saveTimerWithNote() {
+        const latestTimer = document.getElementById('myTimer').innerHTML;
+        const note = document.getElementById('note').value;
+
+        if (note.trim() !== '') {
+            const index = savedTimers.length - 1; // Index of the last saved timer
+            savedTimers[index].notes.push(note);
+
+            // Close the popup
+            closePopup();
+
+            // Display the saved time and note in the table on Page 2
+            populateTable();
+        } else {
+            alert('Please enter a note before saving.');
+        }
+    }
+
+    // Function to populate the table on Page 2
+    function populateTable() {
+        const tableBody = document.getElementById('timeTable').querySelector('tbody');
+        tableBody.innerHTML = ''; // Clear existing rows
+
+        for (let i = 0; i < savedTimers.length; i++) {
+            const row = tableBody.insertRow();
+            const cell1 = row.insertCell(0);
+            const cell2 = row.insertCell(1);
+
+            cell1.textContent = savedTimers[i].timer;
+
+            if (savedTimers[i].notes.length > 0) {
+                // Display all notes for the current timer in a single cell
+                cell2.textContent = savedTimers[i].notes.join(', ');
+            } else {
+                cell2.textContent = '-';
             }
-        
-            let timer;
-            let seconds = 0;
-            let savedTimers = [];
-        
-            function startTimer() {
-                timer = setInterval(function() {
-                    seconds++;
-                    updateTimerDisplay();
-                }, 1000);
-            }
-        
-            function stopTimer() {
-                clearInterval(timer);
-            }
-        
-            function resetTimer() {
-                clearInterval(timer);
-                seconds = 0;
-                updateTimerDisplay();
-            }
-        
-            function updateTimerDisplay() {
-                const hours = Math.floor(seconds / 3600);
-                const minutes = Math.floor((seconds % 3600) / 60);
-                const remainingSeconds = seconds % 60;
-        
-                const formattedTime = padNumber(hours) + ":" + padNumber(minutes) + ":" + padNumber(remainingSeconds);
-        
-                document.getElementById('myTimer').innerHTML = formattedTime;
-            }
-        
-            function padNumber(number) {
-                return (number < 10 ? '0' : '') + number;
-            }
-        
-            function saveTimer() {
-                const latestTimer = document.getElementById('myTimer').innerHTML;
-                savedTimers.push(latestTimer);
-                alert('Timer saved: ' + latestTimer);
-        
-                // Display the saved time in the pop-up
-                showPopup('Timer saved: ' + latestTimer);
-            }
-        
-            function showPopup(message) {
-                const popup = document.getElementById('popup');
-                const popupContent = popup.querySelector('.popup-content');
-                const popupMessage = popupContent.querySelector('h2');
-        
-                // Set the message in the popup
-                popupMessage.textContent = message;
-        
-                // Display the pop-up
-                popup.style.display = 'flex';
-            }
-        
-            function closePopup() {
-                document.getElementById('popup').style.display = 'none';
-            }
-        </script>
-        
-    
-    </body>
-    </html>
+        }
+    }
+
+    // Function to clear all results in the table on Page 2
+    function clearResults() {
+        savedTimers = [];
+        populateTable();
+    }
+</script>
