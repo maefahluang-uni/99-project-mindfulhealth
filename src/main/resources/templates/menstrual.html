@@ -255,6 +255,12 @@
         .sidebar button:hover {
             background-color: #ccc;
         }
+        .info-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
 
   
     </style>
@@ -292,11 +298,18 @@
         <div class="page" id="page1">
             <div class="box-container">
                 <div class="box">
-                    <label for="datePicker1">Start Date:</label>
-                    <input type="date" id="datePicker1" onchange="highlightSelectedDate(this, 'periodStartDateTable')">
-                </div>
-                <div class="record-button-container">
-                    <button class="record-button" onclick="recordDate('Start')">Record</button>
+                    <h1>Menstrual Duration Calculator</h1>
+
+                    <label for="startDate">First Day of Period:</label>
+                    <input type="date" id="startDate">
+                
+                    <label for="endDate">Last Day of Period:</label>
+                    <input type="date" id="endDate">
+                
+                    <button onclick="calculateDuration()">Save</button>
+                
+                    <h2>Result:</h2>
+                    <p id="result"></p>
                 </div>
                 <div class="options">
                     <button onclick="goToPage('mainPage')">Back</button>
@@ -393,6 +406,25 @@ let currentPage = 'mainPage';
         document.getElementById(page).style.display = 'block';
         currentPage = page;
     }
+
+    function calculateDuration() {
+            // Get the values of the input fields
+            var startDate = new Date(document.getElementById('startDate').value);
+            var endDate = new Date(document.getElementById('endDate').value);
+
+            // Check if both dates are valid
+            if (isNaN(startDate) || isNaN(endDate)) {
+                alert('Please select valid dates.');
+                return;
+            }
+
+            // Calculate the duration in days
+            var durationInMilliseconds = endDate - startDate;
+            var durationInDays = durationInMilliseconds / (1000 * 60 * 60 * 24);
+
+            // Display the result
+            document.getElementById('result').innerText = 'Duration: ' + durationInDays + ' days';
+        }
 
     function showPopup() {
         document.getElementById('popup').style.display = 'flex';
